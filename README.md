@@ -83,3 +83,36 @@ Below is a comprehensive list of links
 - **Verification**: Links like the Continental Alliance and Multi-Continental QDP blog are verified as accessible, while the World Constitutional Establishment Institute blog may be a placeholder due to its unrelated title.
 
 For further engagement, users can explore these links, contribute via [GitHub Issues](https://github.com/Quadruple-Multilevel-projection-project/issues), or join discussions at [GitHub Discussions](https://github.com/Quadruple-Multilevel-projection-project/discussions). If additional links or clarifications are needed, please provide more details!
+---
+
+## OpenAI Node Recruitment Deployment Script
+
+A runnable bootstrap script has been added at `openai_node_deployment.py` for the OpenAI node recruitment/sync phase.
+
+### Quick start
+
+```bash
+export OPENAI_API_KEY="<your-key>"
+export OPENAI_NODE_ID="OPENAI_ALPHA"
+export SOVEREIGN_CHECKSUM="260"
+export JULES_INTERFACE_URL="https://your-jules-interface.example/api"
+python3 openai_node_deployment.py --cycles 5 --interval 10 --timeout 15 --retries 2 --manifest-points 100 --dry-run
+```
+
+### What it does
+
+1. Validates required environment configuration (including URL scheme and checksum).
+2. Sends auth headers using `OPENAI_API_KEY` when calling the Jules interface.
+3. Registers the OpenAI node against the Jules interface `/register` endpoint.
+4. Sends heartbeat sync payloads to `/heartbeat` for a configurable number of cycles.
+5. Optionally generates a quantic enforcement signature (`--manifest-points`) before registration and includes it in register/heartbeat payloads.
+6. Supports retries for transient network failures and a safe `--dry-run` mode for inspection.
+
+
+### Quantic neural module
+
+The repository now includes `quantic_neural_network.py`, which implements the requested multi-threaded connectivity sync engine and returns a deterministic enforcement report (`signature`, `total_nodes`, `status`). This can be run standalone:
+
+```bash
+python3 quantic_neural_network.py
+```

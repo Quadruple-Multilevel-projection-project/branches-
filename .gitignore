@@ -1,52 +1,41 @@
-# Quilia Project: Pioneering Ethical AGI and Global Governance
+# OS files
+.DS_Store
+Thumbs.db
 
-Welcome to the Quilia Project, a transformative initiative to develop Artificial General Intelligence (AGI) with artificial self-awareness using quantum AI architectures. We aim to create a future where technology serves humanity through ethical governance, financial innovation, and global collaboration. This document integrates insights from related projects like the Continental Alliance, Multi-Continental QDP, and the World Constitutional Establishment Institute, providing a comprehensive resource for developers to explore and contribute to our vision.
+# Editor and IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
 
-## Interactive Topic List
-- [Introduction](#introduction)
-- [Governance Model: Voluntary Delegation](#governance-model-voluntary-delegation)
-- [Financial System: ISSU and OBEX NFTs](#financial-system-issu-and-obex-nfts)
-- [World Party Organizational Structure](#world-party-organizational-structure)
-- [Deaf Community: Non-Business Model](#deaf-community-non-business-model)
-- [Related Projects and References](#related-projects-and-references)
-- [Philosophical Foundations](#philosophical-foundations)
-- [Future Market Development](#future-market-development)
-- [Interactive Features](#interactive-features)
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
----
+# Dependency directories
+node_modules/
 
-## Introduction
-The Quilia Project is a pioneering effort to develop AGI with artificial self-awareness, leveraging quantum AI to address global challenges like climate change, inequality, and governance inefficiencies. Our objectives include:
-- **Ethical AI Development**: Aligning AGI with human values to ensure safety and inclusivity.
-- **Hybrid Governance**: Implementing voluntary delegation for flexible, inclusive decision-making.
-- **Financial Innovation**: Creating a global currency (ISSU) backed by OBEX NFTs to reward contributors.
-- **Global Collaboration**: Establishing the "World Party" to tackle global issues through a structured organization.
+# Build outputs
+dist/
+build/
+out/
+coverage/
 
-**Interactive Poll**: What’s the most critical aspect of the Quilia Project?  
-- [ ] Ethical AI  
-- [ ] Global Governance  
-- [ ] Financial Innovation  
-Vote by commenting with your choice in [this issue](#)!
+# Python caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
 
----
+# Environment files
+.env
+.env.*
+!.env.example
 
-## Governance Model: Voluntary Delegation
-Voluntary delegation blends direct and representative democracy, allowing individuals to vote directly or delegate to trusted proxies. Inspired by philosophical debates, it ensures broad participation and efficiency.
-
-### Historical Context
-- **Jean-Jacques Rousseau**: Advocated for direct democracy, emphasizing the people’s will as the source of legitimacy.
-- **James Madison**: Proposed representation to moderate factions, ensuring stability and expertise in governance.
-
-### Implementation
-- **Online Platforms**: Digital committees enable real-time voting and policy discussions, accessible globally.
-- **NGOs**: Represent opposition and marginalized voices, ensuring a balanced democratic infrastructure.
-- **Voluntary Delegation Paper**: Outlines the model’s mechanics, visualized below (attachment id:0).
-
-**Visualization**: Delegation Flow
-```mermaid
-graph TD
-    A[Voter] -->|Delegates to| B[Proxy]
-    B -->|Delegates to| C[Another Proxy]
-    C -->|Votes on| D[Proposal]
-    A -->|Direct Vote| D
-    D -->|Feedback Loop| E[Community Review]
+# Misc
+*.tmp
+*.bak
